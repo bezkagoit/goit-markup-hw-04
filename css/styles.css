@@ -195,6 +195,7 @@ h6 {
 .hero-button:hover {
   background-color: var(--color-hover);
   color: var(--color-light);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:focus {
@@ -274,6 +275,8 @@ h6 {
   background-color: var(--color-background);
   flex-basis: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .team {
@@ -314,13 +317,31 @@ h6 {
 .team-socials-link {
   width: 40px;
   height: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-socials-icon {
   fill: none;
   transition: stroke 0.2s;
+  width: 100%;
+  height: 100%;
+  background-color: var(--c-brand);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-socials-icon:hover {
+  background-color: var(--color-hover);
 }
 
+.team-socials-icon:focus {
+  background-color: var(--color-hover);
+}
+
+.team-socials-img {
+  fill: var(--color-basic-light);
+}
 /* Portfolio section */
 
 .section {
@@ -415,9 +436,14 @@ h6 {
   background-color: var(--color-basic);
   padding: 100px 0;
 }
-.footer-inner {
+.container-footer-inner {
   display: flex;
   align-items: baseline;
+}
+
+.footer-inner-logo {
+  margin-right: 120px;
+  margin-left: 156px;
 }
 
 .logo-footer {
@@ -434,11 +460,6 @@ h6 {
 
 .logo-part-down {
   color: var(--color-basic-light);
-}
-
-.footer-inner-logo {
-  margin-right: 120px;
-  margin-left: 156px;
 }
 
 .footer-text {
@@ -476,17 +497,22 @@ h6 {
 .footer-social-link:hover {
   fill: var(--color-icons);
 }
-
+/* 
 .footer-social-click {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+
   fill: var(--c-brand);
   border-radius: 50%;
 }
 
 .footer-social-click:hover {
   fill: var(--color-icons);
+}
+*/
+.footer-social-icon {
+  width: 40px;
+  height: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
