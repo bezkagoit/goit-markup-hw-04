@@ -399,6 +399,8 @@ h6 {
 }
 
 .portfolio-item {
+  position: relative;
+  overflow: hidden;
   width: calc((100% - 48px) / 3);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -428,7 +430,7 @@ h6 {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-image:hover .portfolio-overlay {
+.portfolio-item:hover .portfolio-overlay {
   transform: translateY(0);
 }
 
@@ -437,15 +439,13 @@ h6 {
 }
 
 .portfolio {
-  padding-bottom: 32px;
+  padding: 32px 16px;
   background: var(--color-background);
   border: 1px solid var(--color-box);
   border-top: none;
-  text-align: center;
 }
 
 .portfolio-title {
-  margin-top: 32px;
   margin-bottom: 8px;
   color: var(--color-basic);
   font-size: 20px;
